@@ -1,17 +1,16 @@
 import React from 'react';
 
-const SubMenu = React.lazy(() => import('./views/menus/sub-menu/SubMenu'));
-const Registration = React.lazy(() => import('./views/menus/registration/EmployeeIndex'));
-const List = React.lazy(() => import('./views/menus/list/EmployeeListIndex'));
-const DeptPosition = React.lazy(() => import('./views/menus/deptPositionReg/DeptPositionRegIndex'));
+const  StudentRegistration = React.lazy(() => import('./views/registration/RegistrationIndex'));
+// const  StudentRegistrationFromExcel = React.lazy(() => import('./views/registration/StudentRegistrationFromExcel'));
+const StudentList = React.lazy(() => import('./views/list/ListIndex'));
+const EmployeeIndex = React.lazy(()=> import('./views/Employee/EmployeeIndex'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  // { path: '/dashboard', name: 'Dashboard', component: Dashboard },
-  { path: '/menus/sub-menu', name: 'Sub Menu', component: SubMenu },
-  { path: '/menus/registration', name: 'Registration', component: Registration },
-  { path: '/menus/list', name: 'List', component: List },
-  { path: '/menus/deptPositionReg', name: 'Dept Position Reg', component: DeptPosition },
+  { path: '/registration', name: 'Student Registration', component: StudentRegistration },
+  // { path: '/registration-from-excel', name: 'Student Registration From Excel', component: StudentRegistrationFromExcel },
+  { path: '/list', exact: true,  name: 'Student List', component: StudentList },
+  { path: '/employee', exact: true,  name: 'Employee Form', component: EmployeeIndex }
 ];
 
 export default routes;

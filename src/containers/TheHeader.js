@@ -39,7 +39,7 @@ const TheHeader = () => {
 
   return (
     <CHeader withSubheader>
-      <CToggler
+      {/* <CToggler
         inHeader
         className="ml-md-3 d-lg-none"
         onClick={toggleSidebarMobile}
@@ -48,19 +48,19 @@ const TheHeader = () => {
         inHeader
         className="ml-3 d-md-down-none"
         onClick={toggleSidebar}
-      />
+      /> */}
       <CHeaderBrand className="mx-auto d-lg-none" to="/">
-        <h1>Logo</h1>
+        <CIcon name="logo" height="48" alt="Logo"/>
       </CHeaderBrand>
 
       <CHeaderNav className="d-md-down-none mr-auto">
         <CHeaderNavItem className="px-3" >
-          <CHeaderNavLink to="/dashboard">Dashboard</CHeaderNavLink>
+          <CHeaderNavLink to="/registration">Registration</CHeaderNavLink>
         </CHeaderNavItem>
-        {/* <CHeaderNavItem  className="px-3">
-          <CHeaderNavLink to="/users">Users</CHeaderNavLink>
+        <CHeaderNavItem  className="px-3">
+          <CHeaderNavLink to="/list">List</CHeaderNavLink>
         </CHeaderNavItem>
-        <CHeaderNavItem className="px-3">
+        {/* <CHeaderNavItem className="px-3">
           <CHeaderNavLink>Settings</CHeaderNavLink>
         </CHeaderNavItem> */}
       </CHeaderNav>
